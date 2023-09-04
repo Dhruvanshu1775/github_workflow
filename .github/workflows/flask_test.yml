@@ -29,7 +29,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Test App code
-        run: pytest -v     
-
-      - name: Pytest Coverage
-        run: pytest --cov=app --cov-fail-under=90
+        run: |
+            pytest -v
+            pytest --cov=app --cov-fail-under=90    
