@@ -1,4 +1,15 @@
-def test_string():
+import pytest
+from app import app
+
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        return client
+
+
+
+def test_string(client):
+    response = client.get('/page')
     assert "Hey" == "Hey"
 
 
