@@ -1,18 +1,20 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 
-def checker(data):
+def checker(name):
     return "heheh"
 
 
 @app.route('/page', methods=['GET'])
 def new():
-    name = False
-    if name is True:
-        checker("hehehe")
+    name = request.args.get('name')
 
+    print(name)
+
+    if name == 'DHRUV':
+        checker(name)
     return jsonify({
         'name': 'Dhruv'
     })

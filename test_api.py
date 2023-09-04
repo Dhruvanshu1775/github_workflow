@@ -9,7 +9,7 @@ def client():
 
 
 def test_string(client):
-    response = client.get('/page')
+    response = client.get('/page',query_string={'name': 'DHRUV'})
     assert "Hey" == "Hey"
 
 
