@@ -11,7 +11,6 @@ def checker(name):
 def new():
     name = request.args.get('name')
 
-    print(name)
 
     if name == 'DHRUV':
         checker(name)
